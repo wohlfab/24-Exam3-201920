@@ -139,16 +139,15 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
-    val = 0
-    val2= 1
-    val3 =1
+    seq = 0
+    seq2 = 1
+    new = 0
     while True:
-        if val3 > n:
-            break
-        val3 = val2 + val
-        val2 = val3
-        val = val2
-    return val2
+        if new >= n:
+            return seq
+        new = seq + seq2
+        seq = seq2
+        seq2 = new
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
